@@ -64,13 +64,16 @@ $bdd = new PDO("mysql:host=$serverName;dbname=$database;charset=utf8", $user, $p
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" class="nav-link js-scroll-trigger" href="#Studio" style="color: white">Studio</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" class="nav-link js-scroll-trigger" href="PHP/commentaire.php" style="color: white">Commentaires</a>
                     </li>                  
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
                   <li class="nav-item" id="MonCompteButtonNavBarre">                                 
                     <a class="nav-link" href="PHP/login.php" style="color: white">Connexion/Inscription</a>
                   <li class="nav-item" id="MonCompteButtonNavBarre">                                 
-                    <a class="nav-link" href="PHP/deconnexion.php" style="color: white">Deconnection</a>
+                    <a class="nav-link" href="PHP/deconnexion.php" style="color: white">Deconnexion</a>
                 </li>
                   </form>
                 </div>

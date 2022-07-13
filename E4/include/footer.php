@@ -16,7 +16,7 @@
                 <li class="list-inline-item"><a href="#">Camping</a></li>
                 <li class="list-inline-item"><a href="#">Studio</a></li>
             </ul>
-            <p class="copyright">Projet CFA Easyloc @2021</p>
+            <p class="copyright">Letang Nicolas, Baudillon Rémy, Zao Zhuyuan</p>
         </footer>
     </div>
 
