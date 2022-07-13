@@ -1,8 +1,8 @@
--- MySQL dump 10.18  Distrib 10.3.27-MariaDB, for debian-linux-gnu (x86_64)
+-- MySQL dump 10.19  Distrib 10.3.34-MariaDB, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: Easyloc
 -- ------------------------------------------------------
--- Server version	10.3.27-MariaDB-0+deb10u1
+-- Server version	10.3.34-MariaDB-0ubuntu0.20.04.1-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -14,6 +14,32 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `Commentaires`
+--
+
+DROP TABLE IF EXISTS `Commentaires`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Commentaires` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `Pseudo` varchar(255) NOT NULL,
+  `Email` varchar(255) NOT NULL,
+  `Commentaire` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Commentaires`
+--
+
+LOCK TABLES `Commentaires` WRITE;
+/*!40000 ALTER TABLE `Commentaires` DISABLE KEYS */;
+INSERT INTO `Commentaires` VALUES (1,'test13','testest@hotmail.fr','test'),(2,'test','test@mail.fr','test 123'),(3,'test13','testest@hotmail.fr','test\r\n'),(4,'test ','tes123@hotmail.fr','blabla'),(5,'test','tes123@hotmail.fr','testets\r\n'),(6,'s4nji','testest@hotmail.fr','test'),(7,'s4nji','testest@hotmail.fr','test'),(8,'test13','testest@hotmail.fr','test'),(9,'ni','ni@mail','test test test ');
+/*!40000 ALTER TABLE `Commentaires` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `Users`
@@ -31,7 +57,7 @@ CREATE TABLE `Users` (
   `Password` varchar(255) NOT NULL,
   `is_admin` int(11) NOT NULL,
   PRIMARY KEY (`id_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +66,7 @@ CREATE TABLE `Users` (
 
 LOCK TABLES `Users` WRITE;
 /*!40000 ALTER TABLE `Users` DISABLE KEYS */;
-INSERT INTO `Users` VALUES (5,'Letang','Nicolas','jak','pand@panda.fr','$2y$10$6ympRjSOdlMXvpMV1pJV4uDmzU7bFnBglZk5SL4qHKn6XKdLllVZi',0),(6,'pierre','paul','jacque','pand@panda.fr','$2y$10$HFkV2Nyh62/tN16fE4jFzO7yeMIDJVjXAKM5mBD4LlWyeFeCYREK2',0),(7,'Letang','Nicolas','s4nj1','fake@mail.fr','$2y$10$mxgadibrkt5O/i/h9rTxY.VjSIi3IhslT7/7i5.qVfQ6xeVItEu1S',1);
+INSERT INTO `Users` VALUES (5,'Letang','Nicolas','jak','pand@panda.fr','$2y$10$6ympRjSOdlMXvpMV1pJV4uDmzU7bFnBglZk5SL4qHKn6XKdLllVZi',0),(6,'pierre','paul','jacque','pand@panda.fr','$2y$10$HFkV2Nyh62/tN16fE4jFzO7yeMIDJVjXAKM5mBD4LlWyeFeCYREK2',0),(7,'Letang','Nicolas','s4nj1','fake@mail.fr','$2y$10$mxgadibrkt5O/i/h9rTxY.VjSIi3IhslT7/7i5.qVfQ6xeVItEu1S',1),(9,'','','','','$2y$10$nf8iWkw/lq2MPIvDBBx7iO4oHTI857QN4434/or61LnnPYnwkEZbS',0),(10,'','','','','$2y$10$K/98v0i44yD9LA.Z4gLO7u6Y96tWQgv7NC7prrN.5IL0G3OT6AH4u',0),(11,'','','s4nji','testest@hotmail.fr','$2y$10$DywsPUWGNFOwI0/Aw9eX0uRUIaWFeZoFVqVhc0oRyVMpdqDaxD.dC',0);
 /*!40000 ALTER TABLE `Users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -247,4 +273,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-22 16:27:24
+-- Dump completed on 2022-07-13 16:51:06
